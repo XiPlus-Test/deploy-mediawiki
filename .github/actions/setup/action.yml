@@ -3,6 +3,8 @@ name: Setup config
 inputs:
   username:
     required: true
+  botname:
+    required: true
   password:
     required: true
   family:
@@ -20,6 +22,7 @@ runs:
       working-directory: ${{ github.action_path }}
       env:
         USERNAME: ${{ inputs.username }}
+        BOTNAME: ${{ inputs.botname }}
         PASSWORD: ${{ inputs.password }}
         FAMILY: ${{ inputs.family }}
         MYLANG: ${{ inputs.mylang }}
