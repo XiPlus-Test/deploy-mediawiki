@@ -31,6 +31,7 @@ with open('user-config.py', 'w', encoding='utf8') as f:
         ))
     if url:
         f.write("family_files['mysite'] = '{}'\n".format(url))
+os.chmod('user-config.py', 0o600)
 
 with open('user-password.py', 'w', encoding='utf8') as f:
     f.write("(u'{}', BotPassword(u'{}', u'{}'))\n".format(
@@ -38,3 +39,4 @@ with open('user-password.py', 'w', encoding='utf8') as f:
         botname,
         password,
     ))
+os.chmod('user-password.py', 0o600)
