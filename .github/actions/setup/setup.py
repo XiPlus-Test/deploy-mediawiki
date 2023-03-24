@@ -15,7 +15,7 @@ if url:
 
 print('username', username)
 print('family', family)
-print('mylang', MYLANG)
+print('mylang', mylang)
 print('url', url)
 
 with open('user-config.py', 'w', encoding='utf8') as f:
