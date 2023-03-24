@@ -11,7 +11,7 @@ url = os.environ.get('URL')
 
 if url:
     family = 'mysite'
-    MYLANG = 'mysite'
+    mylang = 'mysite'
 
 print('username', username)
 print('family', family)
