@@ -17,5 +17,6 @@ runs:
       env:
         SRC: ${{ inputs.src }}
         DST: ${{ inputs.dst }}
+        SUMMARY: ${{ inputs.summary }}
       run: |
         python3 deploy.py
