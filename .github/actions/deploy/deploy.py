@@ -1,7 +1,7 @@
 import os
 
 os.chdir(os.environ.get('GITHUB_WORKSPACE'))
-
+os.environ['PYWIKIBOT_DIR'] = os.environ.get('GITHUB_WORKSPACE')
 import pywikibot
 
 src = os.environ.get('SRC')
