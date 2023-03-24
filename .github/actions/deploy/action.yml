@@ -5,6 +5,8 @@ inputs:
     required: true
   dst:
     required: true
+  summary:
+    type: string
 
 runs:
   using: "composite"
