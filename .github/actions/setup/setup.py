@@ -29,6 +29,7 @@ with open('user-config.py', 'w', encoding='utf8') as f:
             mylang,
             username,
         ))
+    f.write("password_file = 'user-password.py'\n")
     if url:
         f.write("family_files['mysite'] = '{}'\n".format(url))
 os.chmod('user-config.py', 0o600)
