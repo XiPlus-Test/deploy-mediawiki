@@ -17,6 +17,14 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install deploy dependencies
+      run: |
+        pip install mwparserfromhell>=0.5.0 pywikibot
+
     - name: Process
       shell: bash
       working-directory: ${{ github.action_path }}
