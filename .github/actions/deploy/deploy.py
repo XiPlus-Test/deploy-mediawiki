@@ -1,8 +1,8 @@
 import os
 
-import pywikibot
-
 os.chdir(os.environ.get('GITHUB_WORKSPACE'))
+
+import pywikibot
 
 src = os.environ.get('SRC')
 dst = os.environ.get('DST')
