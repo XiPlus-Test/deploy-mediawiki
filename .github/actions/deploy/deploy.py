@@ -16,6 +16,7 @@ with open(src, 'r') as f:
     new_text = f.read()
 
 site = pywikibot.Site()
+site.login()
 page = pywikibot.Page(site, dst)
 
 if new_text.rstrip() == page.text.rstrip():
