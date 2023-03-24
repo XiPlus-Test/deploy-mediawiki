@@ -1,0 +1,19 @@
+name: Deploy to MediaWiki
+
+inputs:
+  src:
+    required: true
+  dst:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Process
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      env:
+        SRC: ${{ inputs.src }}
+        DST: ${{ inputs.dst }}
+      run: |
+        python3 deploy.py

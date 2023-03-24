@@ -1,0 +1,28 @@
+name: Setup config
+
+inputs:
+  username:
+    required: true
+  password:
+    required: true
+  family:
+    type: string
+  mylang:
+    type: string
+  url:
+    type: string
+
+runs:
+  using: "composite"
+  steps:
+    - name: Process
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      env:
+        USERNAME: ${{ inputs.username }}
+        PASSWORD: ${{ inputs.password }}
+        FAMILY: ${{ inputs.family }}
+        MYLANG: ${{ inputs.mylang }}
+        URL: ${{ inputs.url }}
+      run: |
+        python3 setup.py
