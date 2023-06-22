@@ -7,7 +7,7 @@ name: Deploy to MediaWiki
 on:
   push:
     branches:
-      - '**'
+      - main
   workflow_dispatch:
 
 jobs:
